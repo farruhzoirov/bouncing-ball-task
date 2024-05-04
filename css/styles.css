@@ -1,0 +1,50 @@
+/*Initial setup*/
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+/*Main styles*/
+body {
+  margin: 0;
+  overflow: hidden;
+  background-image: url("../img/stadion-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ball {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  animation: ball 2.03s ease-in 0s infinite alternate;
+}
+
+.bounce {
+  animation: bounce 3.14s linear infinite alternate;
+}
+
+
+/*Animations*/
+@keyframes bounce {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(calc(100vw - 10vmin));
+  }
+}
+
+@keyframes ball {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(calc(100vh - 20vmin));
+  }
+}
+
